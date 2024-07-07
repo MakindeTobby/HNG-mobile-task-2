@@ -3,21 +3,21 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./screens/Home";
-import Settings from "./screens/Settings";
 import Cart from "./screens/Cart";
 import Welcome from "./screens/Welcome";
 import { Entypo, FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { theme } from "./constants/theme";
 import ProductDetail from "./screens/ProductDetail";
+import CartIconWithBadge from "./components/CartWithBadge";
+import OrderSuccessScreen from "./screens/OrderComplete";
 
-//  Bottom Tab Navigator
+// Bottom Tab Navigator
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => (
   <Tab.Navigator
     screenOptions={{
       headerShown: false,
-      //   tabBarShowLabel: false,
       tabBarActiveTintColor: theme.colors.primary,
     }}
   >
@@ -35,16 +35,7 @@ const BottomTabNavigator = () => (
       component={Cart}
       options={{
         tabBarIcon: ({ size, color }) => {
-          return <Entypo name="shopping-cart" size={size} color={color} />;
-        },
-      }}
-    />
-    <Tab.Screen
-      name="Settings"
-      component={Settings}
-      options={{
-        tabBarIcon: ({ size, color }) => {
-          return <FontAwesome name="user" size={size} color={color} />;
+          return <CartIconWithBadge size={size} color={color} />;
         },
       }}
     />
@@ -59,6 +50,7 @@ const Navigation = () => (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Welcome" component={Welcome} />
       <Stack.Screen name="Details" component={ProductDetail} />
+      <Stack.Screen name="Complete" component={OrderSuccessScreen} />
       <Stack.Screen name="Main" component={BottomTabNavigator} />
     </Stack.Navigator>
   </NavigationContainer>

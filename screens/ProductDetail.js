@@ -181,12 +181,21 @@ const ProductDetail = () => {
             </Text>
           </View>
         </View>
-        <Pressable
-          style={styles.startButton}
-          onPress={() => dispatch(addToCart(item))}
-        >
-          <Text style={styles.startText}>Add to Cart</Text>
-        </Pressable>
+        {quantity < 1 ? (
+          <View style={styles.disabledButton}>
+            <Text style={styles.disabledButtonText}>Select Quantity</Text>
+          </View>
+        ) : (
+          <Pressable
+            style={styles.startButton}
+            onPress={() => {
+              dispatch(addToCart(item));
+              navigation.navigate("Cart");
+            }}
+          >
+            <Text style={styles.startText}>Add to Cart</Text>
+          </Pressable>
+        )}
       </View>
     </View>
   );
@@ -271,6 +280,20 @@ const styles = StyleSheet.create({
   },
   startText: {
     color: theme.colors.white,
+    fontSize: hp(2),
+    letterSpacing: 1,
+    alignSelf: "center",
+  },
+  disabledButton: {
+    marginBottom: hp(3),
+    backgroundColor: "#ccc",
+    padding: 15,
+    paddingHorizontal: 40,
+    borderRadius: theme.radius.md,
+    borderCurve: "continuous",
+  },
+  disabledButtonText: {
+    color: "#777",
     fontSize: hp(2),
     letterSpacing: 1,
     alignSelf: "center",
