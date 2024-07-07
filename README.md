@@ -35,7 +35,7 @@ Data fetched from the Timbu Api
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/MakindeTobby/simple-ecommerce-app-HNG.git
+   git clone https://github.com/MakindeTobby/Timbu-shopping-app.git
    cd simple-ecommerce-app-HNG
    ```
 
@@ -61,11 +61,11 @@ Data fetched from the Timbu Api
 
 ### Product List
 
-![Product List](./assets/screenshot/product.png)
+![Products](./assets/screenshot/product.png)
 
 ### Product Detail
 
-![Product Detail](./assets/screenshot/detailPage.png)
+![Detail](./assets/screenshot/detailPage.png)
 
 ### Checkout
 
@@ -73,11 +73,11 @@ Data fetched from the Timbu Api
 
 ### Order Successful
 
-![Checkout](./assets/screenshot/checkout.png)
+![Completed](./assets/screenshot/checkout.png)
 
 ### Empty Cart
 
-![Empty Cart](./assets/images/screenshots/emptyCart.png)
+![Empty](./assets/screenshot/empty.png)
 
 ## APK Download
 
