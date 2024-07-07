@@ -170,6 +170,7 @@ const ProductDetail = () => {
               {item.description || "No Description Available for this product"}
             </Text>
           </View>
+          <View></View>
         </View>
       </ScrollView>
       <View style={styles.tabBar}>
@@ -210,7 +211,7 @@ const styles = StyleSheet.create({
   },
   backBtn: {
     position: "absolute",
-    top: 48,
+    top: 40,
     left: 12,
     backgroundColor: theme.colors.primary,
     width: 40,
@@ -241,7 +242,7 @@ const styles = StyleSheet.create({
   },
   detailsContainer: {
     paddingHorizontal: 20,
-    height: hp(46),
+    // height: hp(46),
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     backgroundColor: "white",

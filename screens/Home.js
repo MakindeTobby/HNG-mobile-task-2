@@ -2,6 +2,7 @@ import {
   ActivityIndicator,
   FlatList,
   Image,
+  Platform,
   Pressable,
   SafeAreaView,
   StatusBar,
@@ -18,8 +19,6 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import ProductCard from "../components/ProductCard";
 
 const Home = () => {
-  const { top } = useSafeAreaInsets();
-  const paddingTop = top > 0 ? top + 10 : 30;
   const scrollRef = useRef(null);
   const handleScrollUp = () => {
     scrollRef.current?.scrollToOffset({
@@ -49,14 +48,14 @@ const Home = () => {
 
   if (isLoading) {
     return (
-      <SafeAreaView style={[styles.loadingContainer, paddingTop]}>
+      <SafeAreaView style={[styles.loadingContainer]}>
         <ActivityIndicator size="large" color={theme.colors.neutral(0.9)} />
       </SafeAreaView>
     );
   }
   return (
-    <View style={[styles.container, { paddingTop }]}>
-      <StatusBar barStyle={"dark-content"} />
+    <SafeAreaView style={[styles.container]}>
+      <StatusBar barStyle={"default"} />
       <View style={styles.header}>
         <Pressable onPress={handleScrollUp}>
           <View style={styles.smallCircle}>
@@ -75,7 +74,7 @@ const Home = () => {
           />
         </View>
       </View>
-      <View style={styles.header}>
+      <View style={[styles.header, { paddingVertical: hp(1) }]}>
         <View>
           <Text style={styles.title}>New Arrivals</Text>
         </View>
@@ -98,7 +97,7 @@ const Home = () => {
         columnWrapperStyle={styles.row}
         key={numColumns} // Force a re-render when numColumns changes
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -108,9 +107,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: wp(2),
+    // paddingTop: StatusBar.currentHeight,
+    paddingTop: Platform.OS === "android" ? 25 : 0,
   },
   header: {
-    paddingVertical: hp(1),
+    // paddingVertical: hp(1),
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -128,7 +129,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: "100%",
+    borderRadius: 99,
     backgroundColor: theme.colors.black,
     overflow: "hidden",
   },

@@ -7,7 +7,7 @@ import {
   StatusBar,
 } from "react-native";
 import React from "react";
-import { hp, wp } from "../helpers/common";
+import { hp } from "../helpers/common";
 import { theme } from "../constants/theme";
 import { useNavigation } from "@react-navigation/native";
 
@@ -15,7 +15,7 @@ const Welcomescreen = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <StatusBar barStyle={"light-content"} />
+      <StatusBar barStyle={"default"} />
       <ImageBackground
         source={require("../assets/images/model.jpeg")}
         style={styles.bgImage}
@@ -73,14 +73,14 @@ const styles = StyleSheet.create({
   },
   startButton: {
     backgroundColor: theme.colors.primary,
-    padding: 15,
+    padding: 9,
     paddingHorizontal: 90,
     borderRadius: theme.radius.md,
     borderCurve: "continuous",
   },
   startText: {
     color: theme.colors.white,
-    fontSize: hp(3),
+    fontSize: hp(2.5),
     fontWeight: theme.fontWeights.medium,
     letterSpacing: 1,
   },
