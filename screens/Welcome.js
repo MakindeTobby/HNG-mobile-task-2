@@ -4,9 +4,9 @@ import {
   StyleSheet,
   ImageBackground,
   Pressable,
+  StatusBar,
 } from "react-native";
 import React from "react";
-import { StatusBar } from "expo-status-bar";
 import { hp, wp } from "../helpers/common";
 import { theme } from "../constants/theme";
 import { useNavigation } from "@react-navigation/native";
@@ -15,7 +15,7 @@ const Welcomescreen = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <StatusBar style="light" />
+      <StatusBar barStyle={"light-content"} />
       <ImageBackground
         source={require("../assets/images/model.jpeg")}
         style={styles.bgImage}

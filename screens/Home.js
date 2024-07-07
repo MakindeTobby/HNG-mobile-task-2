@@ -37,7 +37,7 @@ const Home = () => {
   const fetchProducts = async () => {
     let res = await apiCall();
     if (res?.data) {
-      setProducts([...products, ...res?.data?.items]);
+      setProducts(res?.data?.items);
       setIsLoading(false);
       //   if (append) {
       //     setImages([...images, ...res.data.hits]);

@@ -2,11 +2,7 @@ const BUSINESS_ID = process.env.EXPO_PUBLIC_BUSINESS_ID;
 const API_KEY = process.env.EXPO_PUBLIC_API_KEY;
 const APP_ID = process.env.EXPO_PUBLIC_APP_ID;
 
-// const BUSINESS_ID = "a640eea16fb64be1959fda2f0e620953";
-// const API_KEY = "bf0a95998aab4c2db507769f9c93bc4220240704233801699678";
-// const APP_ID = "J283CZPFCXLRI4Q"
-
-const apiUrl = `https://api.timbu.cloud/products?organization_id=${BUSINESS_ID}Appid=${APP_ID}&Apikey=${API_KEY}`;
+const apiUrl = `https://api.timbu.cloud/products?organization_id=${BUSINESS_ID}&Appid=${APP_ID}&Apikey=${API_KEY}`;
 
 export const apiCall = async () => {
   try {
