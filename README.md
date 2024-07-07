@@ -1,4 +1,4 @@
-# Simple Shopping App
+# Timbu Shopping App
 
 This is a Shopping App! This application allows users to browse products, view details, add them to a cart, and checkout.
 
@@ -84,7 +84,7 @@ Data fetched from the Timbu Api
 
 You can download the latest APK from the following link:
 
-[Download APK](https://expo.dev/artifacts/eas/7kc4KrvSooRYnbWNVhjuMN.apk)
+[Download APK](https://expo.dev/artifacts/eas/5V42pjcFCD21GBeQqVc7LW.apk)
 
 ## Usage
 
