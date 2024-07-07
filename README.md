@@ -17,6 +17,7 @@ Data fetched from the Timbu Api
 ## Features
 
 - Browse products
+- Click on a product to view details
 - Add products to cart
 - Remove products from cart
 - Adjust product quantities
