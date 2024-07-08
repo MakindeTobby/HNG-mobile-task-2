@@ -1,5 +1,19 @@
 {
   "build": {
+    "production": {
+      "env": {
+        "EXPO_PUBLIC_BUSINESS_ID": "a640eea16fb64be1959fda2f0e620953",
+        "EXPO_PUBLIC_API_KEY": "bf0a95998aab4c2db507769f9c93bc4220240704233801699678",
+        "EXPO_PUBLIC_APP_ID ": "J283CZPFCXLRI4Q"
+      }
+    },
+    "test": {
+      "env": {
+        "EXPO_PUBLIC_BUSINESS_ID": "a640eea16fb64be1959fda2f0e620953",
+        "EXPO_PUBLIC_API_KEY": "bf0a95998aab4c2db507769f9c93bc4220240704233801699678",
+        "EXPO_PUBLIC_APP_ID ": "J283CZPFCXLRI4Q"
+      }
+    },
     "preview": {
       "android": {
         "buildType": "apk"
@@ -15,20 +29,6 @@
     },
     "preview4": {
       "distribution": "internal"
-    },
-    "production": {
-      "env": {
-        "EXPO_PUBLIC_BUSINESS_ID": "a640eea16fb64be1959fda2f0e620953",
-        "EXPO_PUBLIC_API_KEY": "bf0a95998aab4c2db507769f9c93bc4220240704233801699678",
-        "EXPO_PUBLIC_APP_ID ": "J283CZPFCXLRI4Q"
-      }
-    },
-    "test": {
-      "env": {
-        "EXPO_PUBLIC_BUSINESS_ID": "a640eea16fb64be1959fda2f0e620953",
-        "EXPO_PUBLIC_API_KEY": "bf0a95998aab4c2db507769f9c93bc4220240704233801699678",
-        "EXPO_PUBLIC_APP_ID ": "J283CZPFCXLRI4Q"
-      }
     }
   }
 }

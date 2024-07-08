@@ -84,13 +84,13 @@ Data fetched from the Timbu Api
 
 You can download the latest APK from the following link:
 
-[Download APK](https://expo.dev/artifacts/eas/5V42pjcFCD21GBeQqVc7LW.apk)
+[Download APK](https://expo.dev/artifacts/eas/gSFuss3Hz91dSXH1UQ2WNd.apk)
 
 ## Usage
 
 1. Browse through the product list.
 2. Add items to your cart by clicking the "Add to Cart" button.
-3. Adjust quantities in the cart as needed.
+3. Adjust quantities to the cart as needed.
 4. Proceed to checkout to place your order.
 
 ## Contributing
